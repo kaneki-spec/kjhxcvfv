@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>SpriteLab - Приложения и решения</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="@spritelab/styles/main.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%234A90E2' d='M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <i class="fas fa-flask"></i>
+            <span>SpriteLab</span>
+        </div>
+        
+        <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#apps">Приложения</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">Связаться</button>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Добро пожаловать в <span class="gradient-text">SpriteLab</span></h1>
+            <h2>Инновационные решения для вашего бизнеса</h2>
+            <p>SpriteLab — это компания, специализирующаяся на разработке современных мобильных приложений, веб-решений и программного обеспечения. Мы создаем продукты, которые помогают бизнесу расти и развиваться.</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary">Наши приложения</button>
+                <button class="cta-button secondary">Узнать больше</button>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
+    
+    <section class="apps" id="apps">
+        <h2 class="section-title">Наши <span>приложения</span></h2>
+        <p class="section-subtitle">Мы создаём современные технологические решения, которые помогают бизнесу расти и развиваться</p>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Мобильные приложения</h3>
+                <p>Разработка нативных и кроссплатформенных мобильных приложений для iOS и Android</p>
+                <div class="app-tags">
+                    <span class="tag">iOS</span>
+                    <span class="tag">Android</span>
+                    <span class="tag">React Native</span>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Веб-приложения</h3>
+                <p>Современные веб-решения с использованием передовых технологий и фреймворков</p>
+                <div class="app-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Vue</span>
+                    <span class="tag">Node.js</span>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Облачные решения</h3>
+                <p>Масштабируемые облачные сервисы и инфраструктура для вашего бизнеса</p>
+                <div class="app-tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Аналитика и BI</h3>
+                <p>Системы аналитики и бизнес-аналитики для принятия обоснованных решений</p>
+                <div class="app-tags">
+                    <span class="tag">Analytics</span>
+                    <span class="tag">BI</span>
+                    <span class="tag">Data Science</span>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Безопасность</h3>
+                <p>Решения для защиты данных и обеспечения кибербезопасности ваших систем</p>
+                <div class="app-tags">
+                    <span class="tag">Security</span>
+                    <span class="tag">Encryption</span>
+                    <span class="tag">Compliance</span>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI и ML</h3>
+                <p>Интеграция искусственного интеллекта и машинного обучения в ваши продукты</p>
+                <div class="app-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">ML</span>
+                    <span class="tag">NLP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">О компании SpriteLab</h2>
+                <p>SpriteLab была основана с целью создания инновационных технологических решений, которые помогают бизнесу достигать новых высот. Наша команда состоит из опытных разработчиков, дизайнеров и менеджеров проектов.</p>
+                <p>Мы специализируемся на разработке мобильных приложений, веб-платформ и облачных решений, используя современные технологии и лучшие практики индустрии.</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Проектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Лет опыта</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2 class="section-title">Свяжитесь <span>с нами</span></h2>
+        <p class="section-subtitle">Готовы обсудить ваш проект? Напишите нам, и мы ответим в течение 24 часов</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@spritelab.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <h3>Telegram</h3>
+                        <p>@spritelab</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Телефон</h3>
+                        <p>+7 (XXX) XXX-XX-XX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="logo">
+            <i class="fas fa-flask"></i>
+            <span>SpriteLab</span>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-link" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright"><a href="@@spritelab/admin/index.html" style="text-decoration:none;color:inherit;">© 2024 SpriteLab. Все права защищены.</a></p>
+    </footer>
+    
+    <script src="@spritelab/scripts/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | SpriteLab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%234A90E2' d='M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div class="admin">
+        <header class="admin-header">
+            <div class="header-left">
+                <i class="fas fa-flask"></i>
+                <h1>SpriteLab Admin</h1>
+            </div>
+            <div class="header-actions">
+                <button id="toggle-site" class="btn">Сайт: spritelab.com</button>
+                <button id="logout" class="btn danger">Выйти</button>
+            </div>
+        </header>
+
+        <section id="auth-section" class="card">
+            <h2>Вход в админ-панель</h2>
+            <div class="auth-form">
+                <input id="login-username" placeholder="Логин" type="text">
+                <input id="login-password" type="password" placeholder="Пароль">
+                <button id="login" class="btn primary">Войти</button>
+            </div>
+        </section>
+
+        <section id="app-section" class="hidden">
+            <nav class="tabs">
+                <button data-tab="dashboard" class="tab active">
+                    <i class="fas fa-chart-line"></i> Дашборд
+                </button>
+                <button data-tab="apps" class="tab">
+                    <i class="fas fa-mobile-alt"></i> Приложения
+                </button>
+                <button data-tab="users" class="tab">
+                    <i class="fas fa-users"></i> Пользователи
+                </button>
+                <button data-tab="analytics" class="tab">
+                    <i class="fas fa-chart-bar"></i> Аналитика
+                </button>
+                <button data-tab="settings" class="tab">
+                    <i class="fas fa-cog"></i> Настройки
+                </button>
+            </nav>
+
+            <div id="dashboard-tab" class="tab-content active">
+                <h2>Дашборд</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="total-apps">0</div>
+                            <div class="stat-label">Всего приложений</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="total-users">0</div>
+                            <div class="stat-label">Пользователей</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="total-downloads">0</div>
+                            <div class="stat-label">Загрузок</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="avg-rating">0.0</div>
+                            <div class="stat-label">Средний рейтинг</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="apps-tab" class="tab-content">
+                <div class="section-header">
+                    <h2>Управление приложениями</h2>
+                    <button class="btn primary" id="add-app">
+                        <i class="fas fa-plus"></i> Добавить приложение
+                    </button>
+                </div>
+                <div class="apps-list" id="apps-list">
+                    <p class="empty-state">Приложения не найдены</p>
+                </div>
+            </div>
+
+            <div id="users-tab" class="tab-content">
+                <h2>Управление пользователями</h2>
+                <div class="users-list" id="users-list">
+                    <p class="empty-state">Пользователи не найдены</p>
+                </div>
+            </div>
+
+            <div id="analytics-tab" class="tab-content">
+                <h2>Аналитика</h2>
+                <div class="analytics-container">
+                    <div class="chart-card">
+                        <h3>Статистика загрузок</h3>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>График будет здесь</p>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Активность пользователей</h3>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>График будет здесь</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings-tab" class="tab-content">
+                <h2>Настройки</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label>Название компании</label>
+                        <input type="text" value="SpriteLab" id="company-name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email для связи</label>
+                        <input type="email" value="info@spritelab.com" id="contact-email">
+                    </div>
+                    <div class="form-group">
+                        <label>Telegram</label>
+                        <input type="text" value="@spritelab" id="telegram-link">
+                    </div>
+                    <button class="btn primary" id="save-settings">Сохранить настройки</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
